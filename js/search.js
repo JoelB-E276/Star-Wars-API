@@ -9,57 +9,28 @@ searchBtn = document.getElementsByName("btn").addEventListener("click", function
 
 function createDisp(data) {
 
-  for (results in data) {
-    console.log(results);
-    console.log(data.results);
-    let getArticle = document.getElementById("filmsCont");
-    let creatDivCount = document.createElement("div");
-    creatDivCount.classList.add("container");
-    let creatDivRow = document.createElement("div");
-    creatDivRow.classList.add("row");
-    let creatDivCol = document.createElement("div");
-    creatDivCol.classList.add("col-xs-1", "col-md-6", "col-lg-4");
-    let creatDivName = document.createElement("div");
-    creatDivName.classList.add("dName");
-    let creatDivPeople = document.createElement("div");
-    creatDivPeople.classList.add("dPeople");
+  let list = document.getElementById("result");
+ 
+  for (planet of data.results) {
 
-    creatDivCount.appendChild(creatDivRow);
-    creatDivRow.appendChild(creatDivCol);
-    creatDivCol.appendChild(creatDivName);
-    creatDivName.appendChild(creatDivPeople);
-    getArticle.appendChild(creatDivCount);
-
-    creatDivName.innerText = name.value;
-    /* creatDivPeople.innerText = text; */
-
-    let thName = document.getElementById("name");
-    thName.innerText = data;
-    let tdFilms = document.getElementById("films.val");
-    tdFilms.innerText = data.results;
-    let dtPeople = document.getElementById("people.val");
-    dtPeople.innerText = data.people;
-    let dtPlanets = document.getElementById("planets.val");
-    dtPlanets.innerText = data.planets;
-    let tdSpaceships = document.getElementById("spacesphips.val");
-    tdSpaceships.innerText = data.spaceships;
-  }
-}
-
-function dispData(data) {
-  let title = document.getElementsByClassName("title");
-
-  for (const [name, results] of Object.entries(data)) {
-    let title = document.getElementsByClassName("title");
+    list.innerHTML += "<li>"+ planet.name + "</li>"; 
+    list.innerHTML += "<li>"+ planet.residents + "</li>"; 
+    
+    /* ajouter For in pour boucler sur les clefs à l'intérieur du tableau*/
+ console.log(planet)
 
 
-    console.log(name);
-    console.log(results);
-    let creatDivCount = createDisp(data)
-    document.body.innerHTML += name;
+
+
 
   }
 }
+
+
+
+
+
+
 
 function search() {
 
@@ -79,7 +50,7 @@ function search() {
     }
   };
   //httpRequest.open('GET', 'https://swapi.dev/api/' + searchText + '/', true);
-  httpRequest.open('GET', 'https://swapi.dev/api/planets/', true);
+  httpRequest.open('GET', 'https://swapi.dev/api/planets', true);
   httpRequest.send();
 }
 
