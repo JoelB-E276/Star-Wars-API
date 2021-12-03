@@ -89,10 +89,9 @@ textarea {
 
 header{
   background-image:url(../img/starswars.jpg);
-/*   background-size: 100vh;*/
   background-repeat: no-repeat;
   border-bottom: groove;
-  border-color: rgb(248, 246, 141);
+  border-color: rgb(224, 204, 18);
   
 
 }
@@ -102,39 +101,21 @@ body{
   color: rgb(224, 204, 18);
 }
 h1{
-  color: rgb(248, 246, 141);
- /*  background-color: black; */
-
-}
-.card{
-  border-radius: 1px;
-  border-color: rgb(44, 44, 42);
-  background-color: rgb(216, 228, 59, 0.0);
-  transition: width 2s;
-}
-.card:hover{
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-   transform: scale(1.2); 
+  color: rgb(255, 255, 255);
 }
 
-.card>img{
-    height: 18vh;
-}
-.card-text{
-  text-align: center;
-}
+
 #footer{
-  color: rgb(248, 246, 141);
+  color: rgb(255, 255, 255);
   height: 10vh;
- /*  background-image: url(../img/stars.jpg); */
   background-repeat: no-repeat;
   background-size: auto;
   border-top: groove;
-  border-color: rgb(248, 246, 141);
+  border-color: rgb(224, 204, 18);
 }
-#input3{
- width: 50vh;
+
+ #result{
+  background-color: #fdfeff;
 }
 
 
@@ -310,12 +291,6 @@ h1{
     page-break-inside: avoid;
   }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
 
   h2,
   h3 {
