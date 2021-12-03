@@ -21,82 +21,41 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body class="body">
+<body>
 
 
   <header>
     <div class="container">
-      <div class="row">
-        <h1 class="text-center">Tout ce que vous avez toujours voulu savoir sur<br><strong>STAR WARS</strong><br> sans
-          jamais oser
-          le demander</h1>
-      </div>
+      <h1 class="text-center">Tout ce que vous avez toujours voulu savoir sur<br><strong>STAR WARS</strong><br> sans
+        jamais oser le
+        demander</h1>
     </div>
   </header>
 
-  <main class="container">
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 col-xs-12">
-        <div class="card my-5 streched-link" id="people" style="width: 18rem;">
-          <a href="searchpage.html">
-            <img src="img/charact.jpg" class="card-img-top" alt=""></a>
-          <div class="card-body">
-            <p class="card-text">CHARACTERS</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 col-xs-12">
-        <div class="card my-5 streched-link" style="width: 18rem;">
-          <a href="searchpage.html">
-            <img src="img/films2.jpg" class="card-img-top" alt=""></a>
-          <div class="card-body">
-            <p class="card-text">FILMS</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 col-xs-12">
-        <div class="card my-5 streched-link" style="width: 18rem;">
-          <a href="searchpage.html">
-            <img src="img/ship.jpg" class="card-img-top" alt=""></a>
-          <div class="card-body">
-            <p class="card-text">SPACESHIPS</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 col-xs-12">
-        <div class="card my-5 streched-link" style="width: 18rem;">
-          <a href="searchpage.html">
-            <img src="img/tank.jpg" class="card-img-top" alt=""></a>
-          <div class="card-body">
-            <p class="card-text">VEHICLES</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 col-xs-12">
-        <div class="card my-5 streched-link" style="width: 18rem;">
-          <a href="searchpage.html">
-            <img src="img/Metelos1.jpg" class="card-img-top" alt=""></a>
-          <div class="card-body">
-            <p class="card-text">PLANETS</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 col-xs-12">
-        <div class="card my-5 streched-link" style="width: 18rem;">
-          <a href="searchpage.html">
-            <img src="img/species.jpg" class="card-img-top" alt=""></a>
-          <div class="card-body">
-            <p class="card-text">SPECIES</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="api"></section>
+  <form class="text-center mb-3">
+    <h3> Select your category </h3>
+    <select id="category" onchange="dropdownSearch()">
+      <option> Your choice </option>
+      <option> films </option>
+      <option> people </option>
+      <option> planets </option>
+      <option> vehicles </option>
+      <option> starships </option>
+      <option> species </option>
+    </select>
+    <span id="item">
+    </span>
+  </form>
 
+  <main class="container">
+    <table class="table table-striped" id="result">
+    </table> 
+    
+
+    <div id="message"></div>
 
   </main>
 
@@ -115,7 +74,7 @@
     crossorigin="anonymous"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 
