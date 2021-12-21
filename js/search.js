@@ -5,7 +5,7 @@ function dropdownSearch(){
 }
 
 function dropdownItem(dropdownOption, itemUrl){ 
-  deleteDropdown();
+  deleteOptionsDropdown();
   let selectItem = document.getElementById("item");
   let select = document.createElement("select");
   let option = document.createElement("option");
@@ -37,8 +37,6 @@ function itemDetails(){
   let optionValue = itemList.options[itemList.selectedIndex].value;
   swapiRequest(choiceCategory, optionValue);
 }
-
-
 
 function createTable(data){
   let result = document.getElementById("result");
@@ -105,7 +103,7 @@ function createTable(data){
   dropdownItem(dropdownOption, itemUrl);
 }  
  
-function deleteDropdown(){
+function deleteOptionsDropdown(){
   let selectItem = document.getElementById("item");
 
   if(document.getElementById("itemName")){
@@ -123,8 +121,6 @@ function swapiRequest(choiceCategory, optionValue = ''){
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         let data = JSON.parse(httpRequest.responseText);
-        /* console.log(data.results);
-        console.log(data); */
         createTable(data);
       } else {
         let message = document.getElementById("message");
